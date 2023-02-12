@@ -10,6 +10,7 @@
         android:id="@+id/tituloJuego"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:fontFamily="casual"
         android:text="Adivina el numero!"
         android:textSize="40sp"
@@ -33,7 +34,7 @@
         android:id="@+id/botonAdivinar"
         android:layout_width="290dp"
         android:layout_height="67dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:onClick="adivinarNumero"
         android:text="ADIVINAR!"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,27 +42,27 @@
         app:layout_constraintTop_toBottomOf="@+id/textoNumeroAdivinado" />
 
     <TextView
-        android:id="@+id/resultadoJuego"
+        android:id="@+id/numeroDeIntentos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="220dp"
-        android:layout_marginBottom="350dp"
+        android:layout_marginBottom="400dp"
+        android:text="Numero de Intentos: "
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/botonAdivinar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonAdivinar" />
 
     <TextView
-        android:id="@+id/numeroDeIntentos"
+        android:id="@+id/resultadoDelJuego"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="220dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="350dp"
-        android:text="Numero de Intentos: "
+        android:layout_marginBottom="300dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/botonAdivinar"
-        app:layout_constraintTop_toBottomOf="@+id/botonAdivinar" />
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numeroDeIntentos"
+        app:layout_constraintVertical_bias="0.417" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
