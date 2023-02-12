@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -17,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     // Creación del Random
     Random randomNumber = new Random();
-    int result = randomNumber.nextInt(101);
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -27,17 +27,20 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        //Hacer numero aleatorio
+        //Hacer numero aleatorio:
+        int result = randomNumber.nextInt(101);
+        Log.i("Numero aleatorio generado: ", String.valueOf(result));
 
-
-
+        // Contador de intentos:
+        int contadorDeIntentos = 0;
+        
         binding.botonAdivinar.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                System.out.println(result);
-                Toast.makeText(getBaseContext(), "El numero que salió fue " + result, Toast.LENGTH_LONG);
+                System.out.println("...");
+                Log.i("Numero a adivinar: ", String.valueOf(result));
             }
         });
     }
