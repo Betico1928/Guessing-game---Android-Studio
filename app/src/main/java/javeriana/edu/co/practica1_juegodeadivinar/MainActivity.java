@@ -28,19 +28,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         //Hacer numero aleatorio:
-        int result = randomNumber.nextInt(101);
-        Log.i("Numero aleatorio generado: ", String.valueOf(result));
+        int resultadoDelRandom = randomNumber.nextInt(101);
+        Log.i("Numero aleatorio generado: ", String.valueOf(resultadoDelRandom));
 
         // Contador de intentos:
         int contadorDeIntentos = 0;
-        
+
         binding.botonAdivinar.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                System.out.println("...");
-                Log.i("Numero a adivinar: ", String.valueOf(result));
+                Log.i("Numero a adivinar: ", String.valueOf(resultadoDelRandom));
+
+                //if (resultadoDelRandom != )
             }
         });
     }
